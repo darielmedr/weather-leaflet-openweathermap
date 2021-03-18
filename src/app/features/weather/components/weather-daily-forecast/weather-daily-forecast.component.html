@@ -8,7 +8,7 @@
                 <mat-list>
                     <mat-list-item>
                         <img mat-list-avatar *ngIf="daily.icon"
-                            src="http://openweathermap.org/img/wn/{{daily.icon}}@2x.png" alt="weather condition">
+                            src="https://openweathermap.org/img/wn/{{daily.icon}}@2x.png" alt="weather condition">
                         <span mat-line>{{daily.tempForecast.max | number: '1.0-0'}} / {{daily.tempForecast.min | number:
                             '1.0-0'}}<span>&#8451;</span></span>
                         <span mat-line>{{daily.tempForecast.max | tempetureConverter: "C-F" | number: '1.0-0'}} /
