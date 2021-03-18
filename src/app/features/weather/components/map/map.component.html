@@ -1,0 +1,11 @@
+<div class="map-container">
+    <div id="map" leaflet (leafletMapReady)="initializeMap($event)" [leafletOptions]="mapOptions"
+        (leafletClick)="onMapClick($event)">
+
+    </div>
+    <button id="userLocationBtn" mat-icon-button
+            matTooltip="Find your location"
+            (click)="onClickFindAndCenterUserLocation()">
+        <mat-icon id="userLocationIcon">my_location</mat-icon>
+    </button>
+</div>

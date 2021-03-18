@@ -1,0 +1,27 @@
+<div fxLayout="column" fxLayoutGap="2rem" class="container">
+    <div fxLayout="row" fxLayoutGap="1rem" fxLayout.lt-md="column">
+        <div fxFlex="1 1 40%">
+            <app-map [coords]="coords" (findAndCenterUserLocation)="getUserLocation()"
+                (selectedLocationChange)="updateCoords($event)">
+            </app-map>
+            <geoapify-geocoder-autocomplete class="address-search" placeholder="Type the location address"
+                (placeSelect)="placeSelected($event)">
+            </geoapify-geocoder-autocomplete>
+        </div>
+        <app-card fxFlex="1 1 auto">
+            <app-weather-summary [locationAddress]="locationAddress" [weather]="weather"></app-weather-summary>
+        </app-card>
+    </div>
+    <div fxLayout="row" fxLayoutGap="1rem" fxLayout.lt-md="column">
+        <app-card fxFlex="1 1 50%">
+            <app-weather-detail [weather]="weather"></app-weather-detail>
+        </app-card>
+        <app-card title="Hourly forecast" fxFlex="1 1 50%">
+            <app-weather-hourly-line-chart [weather]="weather"></app-weather-hourly-line-chart>
+        </app-card>
+    </div>
+    <div>
+        <h1 class="title">Daily Forecast</h1>
+        <app-weather-daily-forecast [weather]="weather"></app-weather-daily-forecast>
+    </div>
+</div>

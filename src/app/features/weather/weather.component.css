@@ -1,0 +1,12 @@
+.container {
+    background-color: rgba(134, 134, 134, 0.15);
+    padding: 1rem;
+}
+
+.address-search {
+    margin: 3rem;
+}
+
+.title {
+    margin: 1.5rem;
+}

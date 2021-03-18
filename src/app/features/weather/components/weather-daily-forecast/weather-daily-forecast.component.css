@@ -1,0 +1,15 @@
+.centered mat-panel-title {
+  align-items: center;
+  width: 50px !important;
+  margin: 0;
+}
+
+.centered mat-panel-description {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+img {
+  background-color: aquamarine;
+}

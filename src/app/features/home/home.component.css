@@ -1,0 +1,38 @@
+.initial {
+    height: calc(100vh - 64px);
+    background: url("https://wallpaperaccess.com/full/445458.jpg")
+        no-repeat center center fixed;
+    background-size: cover;
+}
+
+.arrow-down {
+    margin-bottom: 2rem;
+}
+.arrow-down mat-icon {
+    color: rgba(255, 255, 255, 0.7);
+    transform: scale(2.5);
+}
+.arrow-down :hover{
+    color: rgb(255, 255, 255);
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 200px;
+}
+.footer a {
+    font-size: 2.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.description {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.description app-card {
+    margin: 1.5rem;
+    text-align: center;
+}
+.description app-card img {
+    max-width: 250px;
+    max-height: 250px;
+}

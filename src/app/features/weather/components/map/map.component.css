@@ -1,0 +1,20 @@
+.map-container {
+  position: relative;
+}
+
+#map {
+  height: 300px;
+}
+
+#userLocationBtn {
+  position: absolute;
+  top: 240px;
+  left: 10px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  transform: scale(1);
+}
+#userLocationIcon {
+  transform: scale(1.1);
+}

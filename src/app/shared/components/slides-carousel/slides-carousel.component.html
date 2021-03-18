@@ -1,0 +1,7 @@
+<mat-carousel [interval]="3000"
+              [hideArrows]="false"
+              [maintainAspectRatio]="false"
+              [slideHeight]="slidesHeight">
+    <mat-carousel-slide *ngFor="let slide of slides" [image]="slide.url">
+    </mat-carousel-slide>
+</mat-carousel>

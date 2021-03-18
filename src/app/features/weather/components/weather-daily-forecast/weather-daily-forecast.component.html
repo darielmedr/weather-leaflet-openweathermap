@@ -1,0 +1,26 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let daily of weather.daily">
+        <mat-expansion-panel-header class="centered">
+            <mat-panel-title>
+                {{daily.dt | date: dateFormat}}
+            </mat-panel-title>
+            <mat-panel-description>
+                <mat-list>
+                    <mat-list-item>
+                        <img mat-list-avatar *ngIf="daily.icon"
+                            src="http://openweathermap.org/img/wn/{{daily.icon}}@2x.png" alt="weather condition">
+                        <span mat-line>{{daily.tempForecast.max | number: '1.0-0'}} / {{daily.tempForecast.min | number:
+                            '1.0-0'}}<span>&#8451;</span></span>
+                        <span mat-line>{{daily.tempForecast.max | tempetureConverter: "C-F" | number: '1.0-0'}} /
+                            {{daily.tempForecast.min | tempetureConverter: "C-F" | number:
+                            '1.0-0'}}<span>&#8457;</span></span>
+                    </mat-list-item>
+                </mat-list>
+                <p fxHide.lt-sm>{{daily.description}}</p>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <ng-template matExpansionPanelContent>
+            <app-weather-daily-forecast-detail [daily]="daily"></app-weather-daily-forecast-detail>
+        </ng-template>
+    </mat-expansion-panel>
+</mat-accordion>

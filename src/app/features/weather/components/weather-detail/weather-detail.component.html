@@ -1,0 +1,41 @@
+<mat-list>
+    <h3>Weather Condition: {{weather.current.weatherCondition}}</h3>
+    <p>Description: {{weather.current.description| lowercase}}</p>
+
+    <mat-list-item>
+        <mat-icon mat-list-icon>opacity</mat-icon>
+        <div mat-line>Humidity:</div>
+        <div>{{weather.current.humidity}} %</div>
+    </mat-list-item>
+    <mat-list-item>
+        <mat-icon mat-list-icon>waves</mat-icon>
+        <div mat-line>Pressure:</div>
+        <div>{{weather.current.pressure}} hPa</div>
+    </mat-list-item>
+    <mat-list-item>
+        <mat-icon mat-list-icon>cloud</mat-icon>
+        <div mat-line>Cloudiness:</div>
+        <div>{{weather.current.clouds}} %</div>
+    </mat-list-item>
+    <mat-list-item>
+        <mat-icon mat-list-icon>air</mat-icon>
+        <div mat-line>Wind speed:</div>
+        <div>{{weather.current.windSpeed}} m/s</div>
+    </mat-list-item>
+    <mat-list-item>
+        <mat-icon mat-list-icon>wb_sunny</mat-icon>
+        <div mat-line>Sunrise:</div>
+        <div>
+            <p mat-line>{{weather.current.sunrise | date}}</p>
+            <p mat-line>{{weather.current.sunrise | date: 'shortTime'}}</p>
+        </div>
+    </mat-list-item>
+    <mat-list-item>
+        <mat-icon mat-list-icon>nightlight</mat-icon>
+        <div mat-line>Sunset:</div>
+        <div>
+            <p mat-line>{{weather.current.sunset | date}}</p>
+            <p mat-line>{{weather.current.sunset | date: 'shortTime'}}</p>
+        </div>
+    </mat-list-item>
+</mat-list>

@@ -1,0 +1,73 @@
+<div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-around center">
+    <table class="text-center">
+        <thead>
+            <tr>
+                <th>
+                    <mat-icon>thermostat</mat-icon>
+                    <span>(<span>&#8451;</span>/ <span>&#8457;</span>)</span>
+                </th>
+                <th>Day</th>
+                <th>Night</th>
+                <th>Morn</th>
+                <th>Eve</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Tempeture</th>
+                <td> {{daily.tempForecast.day | number: '1.0-0'}}/ {{daily.tempForecast.day | tempetureConverter: 'C-F'
+                    | number: '1.0-0'}} </td>
+                <td> {{daily.tempForecast.night | number: '1.0-0'}}/ {{daily.tempForecast.night | tempetureConverter:
+                    'C-F' | number: '1.0-0'}} </td>
+                <td> {{daily.tempForecast.morning | number: '1.0-0'}}/ {{daily.tempForecast.morning |
+                    tempetureConverter: 'C-F' | number: '1.0-0'}} </td>
+                <td> {{daily.tempForecast.evening | number: '1.0-0'}}/ {{daily.tempForecast.evening |
+                    tempetureConverter: 'C-F' | number: '1.0-0'}} </td>
+            </tr>
+            <tr>
+                <th>Feels like</th>
+                <td> {{daily.feelsLikeForecast.day | number: '1.0-0'}}/ {{daily.feelsLikeForecast.day | tempetureConverter:
+                    'C-F' | number: '1.0-0'}} </td>
+                <td> {{daily.feelsLikeForecast.night | number: '1.0-0'}}/ {{daily.feelsLikeForecast.night |
+                    tempetureConverter: 'C-F' | number: '1.0-0'}} </td>
+                <td> {{daily.feelsLikeForecast.morning | number: '1.0-0'}}/ {{daily.feelsLikeForecast.morning |
+                    tempetureConverter: 'C-F' | number: '1.0-0'}} </td>
+                <td> {{daily.feelsLikeForecast.evening | number: '1.0-0'}}/ {{daily.feelsLikeForecast.evening |
+                    tempetureConverter: 'C-F' | number: '1.0-0'}} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-around center">
+        <mat-list>
+            <mat-list-item>
+                <mat-icon mat-list-icon>cloud</mat-icon>
+                <div mat-line>{{daily.clouds}} %</div>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon>opacity</mat-icon>
+                <div mat-line>{{daily.humidity}}%</div>
+            </mat-list-item>
+        </mat-list>
+        <mat-list>
+            <mat-list-item>
+                <mat-icon mat-list-icon>wb_sunny</mat-icon>
+                <div mat-line>{{daily.sunrise | date: 'shortTime'}}</div>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon>nightlight</mat-icon>
+                <div mat-line>{{daily.sunset | date: 'shortTime'}}</div>
+            </mat-list-item>
+        </mat-list>
+        <mat-list>
+            <mat-list-item>
+                <mat-icon mat-list-icon>air</mat-icon>
+                <div mat-line>{{daily.windSpeed}} m/s</div>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon>waves</mat-icon>
+                <div mat-line>{{daily.pressure}} hPa</div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>
