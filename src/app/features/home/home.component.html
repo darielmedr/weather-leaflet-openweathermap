@@ -1,11 +1,12 @@
-<section class="initial" fxLayoutAlign="center end">
+<section class="landpage">
+    <button mat-flat-button color="primary" routerLink="/weather">See weather stats</button>
     <button mat-icon-button class="arrow-down" (click)="scrollTo(description)">
         <mat-icon>keyboard_arrow_down</mat-icon>
     </button>
 </section>
 
-<section #description class="description" fxLayout.lt-sm="column" fxLayoutAlign="space-evenly">
-    <app-card fxFlex="1 1 50%">
+<section #description class="description" fxLayout="row" fxLayout.lt-sm="column">
+    <app-card fxFlex="1 1 100%">
         <h2>Select the location</h2>
         <img mat-card-image
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzSQhyd099G5Ox299AxkMJeFZk3PBQlvPRkg&usqp=CAU"
@@ -13,7 +14,7 @@
         <p>Find any location in the map and click on it or use the search textbox to filter by city name, country or
             full address.</p>
     </app-card>
-    <app-card fxFlex="1 1 50%">
+    <app-card fxFlex="1 1 100%">
         <h2>Weather Condition</h2>
         <img mat-card-image
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf6_4esULyk9J3r_YTzUn1JANOo8hN_7EIPg&usqp=CAU"

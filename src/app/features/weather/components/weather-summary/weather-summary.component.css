@@ -10,9 +10,11 @@
 .big-temp {
     height: 72px;
 }
-.big-temp h3{
+.big-temp h3 {
     font-size: 2.4rem !important;
-    margin: 0;
+}
+.big-temp h3:not(:last-of-type) {
+    margin-right: 1rem;
 }
 .big-temp span {
     font-size: 2rem;

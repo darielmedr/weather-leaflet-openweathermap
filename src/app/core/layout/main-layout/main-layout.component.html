@@ -14,7 +14,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <button mat-flat-button color="primary" routerLink="/">Weather App</button>
+      <button mat-flat-button color="primary" routerLink="/">What's Weather</button>
       <span class="flex-spacer"></span>
       <div class="menuItems" *ngIf="!(isHandset$ | async)">
         <button mat-flat-button color="primary" type="menu" *ngFor="let item of menuItems"

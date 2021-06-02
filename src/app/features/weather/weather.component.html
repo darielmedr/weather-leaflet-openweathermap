@@ -8,15 +8,15 @@
                 (placeSelect)="placeSelected($event)">
             </geoapify-geocoder-autocomplete>
         </div>
-        <app-card fxFlex="1 1 auto">
+        <app-card class="summary" fxFlex="1 1 auto">
             <app-weather-summary [locationAddress]="locationAddress" [weather]="weather"></app-weather-summary>
         </app-card>
     </div>
     <div fxLayout="row" fxLayoutGap="1rem" fxLayout.lt-md="column">
-        <app-card fxFlex="1 1 50%">
+        <app-card fxFlex="1 1 100%">
             <app-weather-detail [weather]="weather"></app-weather-detail>
         </app-card>
-        <app-card title="Hourly forecast" fxFlex="1 1 50%">
+        <app-card title="Hourly forecast" fxFlex="1 1 100%">
             <app-weather-hourly-line-chart [weather]="weather"></app-weather-hourly-line-chart>
         </app-card>
     </div>

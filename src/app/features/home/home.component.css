@@ -1,12 +1,16 @@
-.initial {
+.landpage {
     height: calc(100vh - 64px);
     background: url("https://wallpaperaccess.com/full/445458.jpg")
         no-repeat center center fixed;
     background-size: cover;
+    display: grid;
+    place-items: center;
+    position: relative;
 }
 
 .arrow-down {
-    margin-bottom: 2rem;
+    position: absolute;
+    bottom: 2rem;
 }
 .arrow-down mat-icon {
     color: rgba(255, 255, 255, 0.7);
@@ -27,6 +31,7 @@
 
 .description {
     background-color: rgba(255, 255, 255, 0.1);
+    margin: 3rem 0;
 }
 .description app-card {
     margin: 1.5rem;
