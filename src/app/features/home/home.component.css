@@ -1,6 +1,6 @@
 .landpage {
     height: calc(100vh - 64px);
-    background: url("https://wallpaperaccess.com/full/445458.jpg")
+    background: url("/assets/weather-bg-sm.jpg")
         no-repeat center center fixed;
     background-size: cover;
     display: grid;
@@ -40,4 +40,11 @@
 .description app-card img {
     max-width: 250px;
     max-height: 250px;
+}
+
+@media screen and (min-width: 376px) {
+    .landpage {
+        height: calc(100vh - 64px);
+        background-image: url("/assets/weather-bg-md.jpg");
+    }
 }
